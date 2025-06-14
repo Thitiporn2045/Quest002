@@ -1,10 +1,68 @@
 /*
- * This is a manifest file that'll be compiled into application.css.
- *
- * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
- * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
- * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
- * depending on specificity.
- *
- * Consider organizing styles into separate files for maintainability.
- */
+* This is a manifest file that'll be compiled into application.css.
+*
+* With Propshaft, assets are served efficiently without preprocessing steps. You can still include
+* application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
+* cascading order, meaning styles declared later in the document or manifest will override earlier ones,
+* depending on specificity.
+*
+* Consider organizing styles into separate files for maintainability.
+*/
+
+@keyframes fadeInUp {
+    from {
+    opacity: 0;
+    transform: translateY(30px);
+    }
+    to {
+    opacity: 1;
+    transform: translateY(0);
+    }
+}
+
+.animate-fadeInUp {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-delay-200 {
+    animation-delay: 0.2s;
+}
+
+.animate-delay-300 {
+    animation-delay: 0.3s;
+}
+
+.animate-delay-400 {
+    animation-delay: 0.4s;
+}
+
+.peer:checked ~ label {
+    background: linear-gradient(to right, #6366f1, #9333ea) !important;
+    border-color: transparent !important;
+}
+
+.peer:checked ~ label svg {
+    opacity: 1 !important;
+}
+
+/* เอฟเฟกต์เพิ่มเติม */
+.peer:checked ~ label {
+    transform: scale(1.05);
+}
+
+.peer:focus ~ label {
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+/* Smooth hover effects */
+.group:hover {
+    transform: translateY(-2px);
+}
+
+/* Mobile responsive improvements */
+@media (max-width: 640px) {
+    .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    }
+}
