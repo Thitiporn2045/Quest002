@@ -56,7 +56,7 @@ end
 
 When('I fill in {string} with {string}') do |field, value|
   testIdMap = {
-    "Title" => "task-title-input",
+    "Title" => "task-title-input"
   }
   testid = testIdMap[field]
   if testid.nil?
@@ -100,4 +100,3 @@ end
 Then('I should not see {string} in the task list') do |title|
   expect(page).not_to have_content(title)
 end
-
