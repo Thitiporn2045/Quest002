@@ -37,7 +37,7 @@
 }
 
 .peer:checked ~ label {
-    background: linear-gradient(to right, #6366f1, #9333ea) !important;
+    background: linear-gradient(to right, #f9a8d4, #d8b4fe) !important;
     border-color: transparent !important;
 }
 

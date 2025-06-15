@@ -1,0 +1,59 @@
+<section class="min-h-screen py-20 px-4 sm:px-8">
+  <div class="max-w-4xl mx-auto space-y-12 animate-fadeInUp">
+
+    <!-- Header Section -->
+    <div class="relative text-center space-y-3">
+      <!-- Floating Decorations -->
+      <div class="absolute -top-4 -left-4 w-8 h-8 bg-gradient-to-r from-pink-300 to-purple-300 rounded-full opacity-60 animate-pulse"></div>
+      <div class="absolute -bottom-4 -right-4 w-6 h-6 bg-gradient-to-r from-blue-300 to-indigo-300 rounded-full opacity-60 animate-pulse" style="animation-delay: 0.5s;"></div>
+      
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-800">
+        My 2025 Goals
+      </h1>
+      <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-pink-300 to-purple-300 rounded-full"></div>
+    </div>
+
+    <!-- Goals Card -->
+    <div class="relative backdrop-blur-lg bg-white border border-white/30 shadow-md rounded-3xl p-6 sm:p-10 overflow-hidden">
+
+      <!-- Profile and Back Button -->
+      <div class="flex justify-between items-start sm:items-center gap-6 mb-8">
+        <!-- Profile -->
+        <div class="flex items-center gap-4">
+          <div class="relative w-14 h-14 sm:w-16 sm:h-16 rounded-full ring-4 ring-pink-200 shadow-lg overflow-hidden">
+            <%= image_tag "GIFT2.JPG", alt: "profile image", class: "w-full h-full object-cover" %>
+          </div>
+          <div>
+            <h2 class="text-xl sm:text-2xl font-bold text-gray-800">Thitiporn T.</h2>
+            <p class="text-sm text-gray-500">posted goals for 2025</p>
+          </div>
+        </div>
+
+        <!-- Back Button -->
+        <%= link_to root_path, class: "flex items-center justify-center px-4 py-2 sm:px-6 sm:py-3 bg-white text-gray-800 rounded-full font-semibold transition-transform hover:scale-105 hover:shadow-xl shadow-md space-x-2" do %>
+          <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+          </svg>
+          <span class="hidden sm:inline">Back Home</span>
+        <% end %>
+      </div>
+
+      <!-- Goals List -->
+      <ul class="space-y-5">
+        <% items = [
+          { text: "เรียนรู้วิธีการทำงานของพี่ๆ และสามารถนำไปปรับใช้ในโปรเจกต์หน้าได้" },
+          { text: "สร้าง MVP ที่ช่วยแก้ปัญหาให้ BMA (โรงเรียนฝึกอาชีพกรุงเทพมหานคร) อย่างน้อยสัก 1 MVP" },
+          { text: "พัฒนาเว็บไซต์ด้วย Ruby on Rails อย่างน้อย 1 เว็บไซต์" },
+          { text: "ทำ Codewars ให้ได้ 60++ แต้ม" },
+          { text: "เขียน Automated Test ให้คล่องสามารถนำไปปรับใช้ในโปรเจกต์ถัดไปได้" }
+        ] %>
+
+        <% items.each do |item| %>
+          <li class="text-slate-700 font-medium text-lg leading-relaxed list-disc ml-5">
+            <%= raw item[:text] %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</section>

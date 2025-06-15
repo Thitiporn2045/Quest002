@@ -58,7 +58,7 @@ export default class extends Controller {
         statusElement.classList.remove("bg-blue-100", "text-blue-800");
         statusElement.classList.add("bg-green-100", "text-green-800");
       } else {
-        statusElement.textContent = "📋 Pending";
+        statusElement.textContent = "⏰ In Progress";
         statusElement.classList.remove("bg-green-100", "text-green-800");
         statusElement.classList.add("bg-blue-100", "text-blue-800");
       }
